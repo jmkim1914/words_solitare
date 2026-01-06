@@ -1,0 +1,283 @@
+{
+  "levels": [
+    {
+      "level": 1,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 5,
+      "keyword_count_max": 6,
+      "related_word_count_min": 3,
+      "related_word_count_max": 5
+    },
+    {
+      "level": 10,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 5,
+      "keyword_count_max": 6,
+      "related_word_count_min": 3,
+      "related_word_count_max": 5
+    },
+    {
+      "level": 20,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 5,
+      "keyword_count_max": 6,
+      "related_word_count_min": 3,
+      "related_word_count_max": 5
+    },
+    {
+      "level": 30,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 5,
+      "keyword_count_max": 6,
+      "related_word_count_min": 3,
+      "related_word_count_max": 5
+    },
+    {
+      "level": 40,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 5,
+      "keyword_count_max": 7,
+      "related_word_count_min": 3,
+      "related_word_count_max": 5
+    },
+    {
+      "level": 50,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 6,
+      "keyword_count_max": 7,
+      "related_word_count_min": 3,
+      "related_word_count_max": 5
+    },
+    {
+      "level": 60,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 6,
+      "keyword_count_max": 7,
+      "related_word_count_min": 3,
+      "related_word_count_max": 5
+    },
+    {
+      "level": 70,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 6,
+      "keyword_count_max": 8,
+      "related_word_count_min": 4,
+      "related_word_count_max": 6
+    },
+    {
+      "level": 80,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 6,
+      "keyword_count_max": 8,
+      "related_word_count_min": 4,
+      "related_word_count_max": 6
+    },
+    {
+      "level": 90,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 6,
+      "keyword_count_max": 8,
+      "related_word_count_min": 4,
+      "related_word_count_max": 6
+    },
+    {
+      "level": 100,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 6,
+      "keyword_count_max": 8,
+      "related_word_count_min": 4,
+      "related_word_count_max": 6
+    },
+    {
+      "level": 110,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 7,
+      "keyword_count_max": 8,
+      "related_word_count_min": 4,
+      "related_word_count_max": 7
+    },
+    {
+      "level": 120,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 7,
+      "keyword_count_max": 8,
+      "related_word_count_min": 4,
+      "related_word_count_max": 7
+    },
+    {
+      "level": 130,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 7,
+      "keyword_count_max": 8,
+      "related_word_count_min": 4,
+      "related_word_count_max": 7
+    },
+    {
+      "level": 140,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 8,
+      "keyword_count_max": 10,
+      "related_word_count_min": 5,
+      "related_word_count_max": 7
+    },
+    {
+      "level": 150,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 8,
+      "keyword_count_max": 10,
+      "related_word_count_min": 5,
+      "related_word_count_max": 7
+    },
+    {
+      "level": 160,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 9,
+      "keyword_count_max": 10,
+      "related_word_count_min": 5,
+      "related_word_count_max": 7
+    },
+    {
+      "level": 170,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 9,
+      "keyword_count_max": 10,
+      "related_word_count_min": 5,
+      "related_word_count_max": 7
+    },
+    {
+      "level": 180,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 9,
+      "keyword_count_max": 11,
+      "related_word_count_min": 5,
+      "related_word_count_max": 8
+    },
+    {
+      "level": 190,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 9,
+      "keyword_count_max": 11,
+      "related_word_count_min": 5,
+      "related_word_count_max": 8
+    },
+    {
+      "level": 200,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 9,
+      "keyword_count_max": 11,
+      "related_word_count_min": 5,
+      "related_word_count_max": 8
+    },
+    {
+      "level": 210,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 10,
+      "keyword_count_max": 11,
+      "related_word_count_min": 6,
+      "related_word_count_max": 9
+    },
+    {
+      "level": 220,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 10,
+      "keyword_count_max": 11,
+      "related_word_count_min": 6,
+      "related_word_count_max": 9
+    },
+    {
+      "level": 230,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 10,
+      "keyword_count_max": 11,
+      "related_word_count_min": 6,
+      "related_word_count_max": 9
+    },
+    {
+      "level": 240,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 11,
+      "keyword_count_max": 13,
+      "related_word_count_min": 7,
+      "related_word_count_max": 10
+    },
+    {
+      "level": 250,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 11,
+      "keyword_count_max": 13,
+      "related_word_count_min": 7,
+      "related_word_count_max": 10
+    },
+    {
+      "level": 260,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 11,
+      "keyword_count_max": 13,
+      "related_word_count_min": 7,
+      "related_word_count_max": 10
+    },
+    {
+      "level": 270,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 11,
+      "keyword_count_max": 13,
+      "related_word_count_min": 7,
+      "related_word_count_max": 10
+    },
+    {
+      "level": 280,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 12,
+      "keyword_count_max": 14,
+      "related_word_count_min": 8,
+      "related_word_count_max": 10
+    },
+    {
+      "level": 290,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 12,
+      "keyword_count_max": 14,
+      "related_word_count_min": 8,
+      "related_word_count_max": 10
+    },
+    {
+      "level": 300,
+      "deck_count_min": 3,
+      "deck_count_max": 5,
+      "keyword_count_min": 12,
+      "keyword_count_max": 14,
+      "related_word_count_min": 8,
+      "related_word_count_max": 10
+    }
+  ]
+}

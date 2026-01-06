@@ -2,23 +2,52 @@
   "level": 1,
   "difficulty": "easy",
   "deck_count_min": 3,
-  "deck_count_max": 3,
+  "deck_count_max": 5,
   "word_groups": [
     {
-      "keyword": {
-        "ko": "커피"
-      },
-      "related": {
-        "ko": ["원두", "에스프레소", "카페인"]
-      }
+      "keyword": {"ko": "커피"},
+      "related": [
+        {"ko": "원두"},
+        {"ko": "에스프레소"},
+        {"ko": "카페인"},
+        {"ko": "드립"}
+      ]
     },
     {
-      "keyword": {
-        "ko": "도어"
-      },
-      "related": {
-        "ko": ["경첩", "손잡이", "벨"]
-      }
+      "keyword": {"ko": "도어"},
+      "related": [
+        {"ko": "경첩"},
+        {"ko": "손잡이"},
+        {"ko": "벨"},
+        {"ko": "노크"},
+        {"ko": "열쇠"}
+      ]
+    },
+    {
+      "keyword": {"ko": "샐러드"},
+      "related": [
+        {"ko": "시저"},
+        {"ko": "그릭"},
+        {"ko": "드레싱"}
+      ]
+    },
+    {
+      "keyword": {"ko": "정책"},
+      "related": [
+        {"ko": "규제"},
+        {"ko": "헌법"},
+        {"ko": "공약"},
+        {"ko": "법안"}
+      ]
+    },
+    {
+      "keyword": {"ko": "우산"},
+      "related": [
+        {"ko": "장우산"},
+        {"ko": "접이식"},
+        {"ko": "방수"},
+        {"ko": "우비"}
+      ]
     }
   ]
 }
