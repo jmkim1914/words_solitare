@@ -5,19 +5,17 @@ class GameState {
   final LevelModel levelModel;
   final List<DeckModel> decks;
   final List<String> availableWords; // 하단 카드 영역의 단어들
-  final int hearts; // 남은 하트 수
+  final Set<String> completedKeywords // 완성된 키워드
   final int coins; // 게임머니
   final bool isCompleted; // 게임 완료 여부
-  final bool isFailed; // 게임 실패 여부
 
   GameState({
     required this.levelModel,
     required this.decks,
     required this.availableWords,
-    this.hearts = 3,
+    required this.completedKeywords,
     required this.coins,
     this.isCompleted = false,
-    this.isFailed = false,
   });
 
   // 초기 게임 상태 생성
@@ -40,9 +38,13 @@ class GameState {
       levelModel: levelModel,
       decks: decks,
       availableWords: allWords,
+      completedKeywords: {},
       coins: 0,
     );
   }
+
+  // 게임 완료 조건: 모든 덱이 완성되었는지 확인
+  bool get isGameCompleted => completedKeywords.length == levelModel.wordGroups.length;
 
   // 단어를 덱에 배치하는 함수
   GameState placeWordInDeck(String word, int deckIndex) {
@@ -59,13 +61,38 @@ class GameState {
     final newAvailableWords = List<String>.from(availableWords);
     newAvailableWords.remove(word);
 
-    // 모든 덱이 완성되었는지 확인
-    final allDecksComplete = newDecks.every((d) => d.isComplete);
-
-    return copyWith(
+    var newState = copyWith(
       decks: newDecks,
       availableWords: newAvailableWords,
-      isCompleted: allDecksComplete,
+    );
+
+    // 모든 덱이 완성되었는지 확인
+    if (newDecks[deckIndex].isComplete) {
+      newState = newState.clearCompletedDecks(deckIndex);
+    }
+
+    return newState;
+  }
+
+  // 완성된 덱 비우기
+  GameState clearCompletedDecks(int deckIndex) {
+     final completedKeyword = decks[deckIndex].keyword!;
+    
+    // 새로운 덱 리스트 생성 (해당 덱만 비우기)
+    final newDecks = List<DeckModel>.from(decks);
+    newDecks[deckIndex] = DeckModel(deckIndex: deckIndex);
+    
+    // 완성한 키워드 기록
+    final newCompletedKeywords = Set<String>.from(completedKeywords);
+    newCompletedKeywords.add(completedKeyword);
+    
+    // 게임 완료 여부 체크
+    final gameComplete = newCompletedKeywords.length == levelModel.wordGroups.length;
+    
+    return copyWith(
+      decks: newDecks,
+      completedKeywords: newCompletedKeywords,
+      isCompleted: gameComplete,
     );
   }
 
@@ -143,10 +170,8 @@ class GameState {
       levelModel: levelModel,
       decks: decks ?? this.decks,
       availableWords: availableWords ?? this.availableWords,
-      hearts: hearts ?? this.hearts,
       coins: coins ?? this.coins,
       isCompleted: isCompleted ?? this.isCompleted,
-      isFailed: isFailed ?? this.isFailed,
     );
   }
 }

@@ -80,26 +80,72 @@ class LevelConfig {
   final int relatedWordCountMin;
   final int relatedWordCountMax;
 
-  LevelCon
+  LevelConfig({
+    required this.level,
+    required this.deckCountMin,
+    required this.deckCountMax,
+    required this.keywordCountMin,
+    required this.keywordCountMax,
+    required this.relatedWordCountMin,
+    required this.relatedWordCountMax,
+  });
+
+  String get difficulty {
+    if (level <= 100) return 'Easy';
+    if (level <= 200) return 'Medium';
+    return 'Hard';
+  }
+
+  // 랜덤 덱 개수
+  int getRandomDeckCount() {
+    if (deckCountMin == deckCountMax) {
+      return deckCountMin;
+    }
+    return Random().nextInt(deckCountMax - deckCountMin + 1) + deckCountMin;
+  }
+
+  // 랜덤 키워드 개수
+  int getRandomKeywordCount() {
+    if (keywordCountMin == keywordCountMax) {
+      return keywordCountMin;
+    }
+    return Random().nextInt(keywordCountMax - keywordCountMin + 1) + keywordCountMin;
+  }
+
+  // 랜덤 관련 단어 개수
+  int getRandomRelatedWordCount() {
+    if (relatedWordCountMin == relatedWordCountMax) {
+      return relatedWordCountMin;
+    }
+    return Random().nextInt(relatedWordCountMax - relatedWordCountMin + 1) + relatedWordCountMin;
+  }
+
+  factory LevelConfig.fromJson(Map<String, dynamic> json) {
+    return LevelConfig(
+      level: json['level'],
+      deckCountMin: json['deck_count_min'],
+      deckCountMax: json['deck_count_max'],
+      keywordCountMin: json['keyword_count_min'],
+      keywordCountMax: json['keyword_count_max'],
+      relatedWordCountMin: json['related_word_count_min'],
+      relatedWordCountMax: json['related_word_count_max'],
+    );
+  }
 }
 
 class LevelModel {
-    final int level; // 레벨 번호
+    final int level;
+    final String difficulty;
     final int deckCountMin;
     final int deckCountMax;
-    final int keywordCountMin;
-    final int keywordCountMax;
-    final int relatedWordCountMin;
-    final int relatedWordCountMax;
+    final List<WordGroup> wordGroups;
 
     LevelModel({
         required this.level,
+        required this.difficulty,
         required this.deckCountMin,
         required this.deckCountMax,
-        required this.keywordCountMin,
-        required this.keywordCountMax,
-        required this.relatedWordCountMin,
-        required this.relatedWordCountMax,
+        required this.wordGroups
     });
 
     int getRandomDeckCount() {
@@ -107,17 +153,5 @@ class LevelModel {
             return deckCountMin;
         }
         return Random().nextInt(deckCountMax - deckCountMin + 1) + deckCountMin;
-    }
-
-    factory LevelModel.fromJson(Map<String, dynamic> json) {
-        return LevelModel(
-            level: json['level'],
-            difficulty: json['difficulty'],
-            deckCountMin: json['deck_count_min'],
-            deckCountMax: json['deck_count_max'],
-            wordGroups: (json['word_groups'] as List)
-                .map((item) => WordGroup.fromJson(item))
-                .toList()
-        );
     }
 }
